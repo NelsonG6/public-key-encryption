@@ -9,7 +9,7 @@ namespace ConsoleApp1
     {
         static uint p;
         static int g;
-        static int e2;
+        static uint e2;
         static uint k;
         static Random EncryptionRand;
 
@@ -26,7 +26,7 @@ namespace ConsoleApp1
 
             p = Convert.ToUInt32(array[0]);
             g = Convert.ToInt32(array[1]);
-            e2 = Convert.ToInt32(array[2]);
+            e2 = Convert.ToUInt32(array[2]);
 
             //Get plaintext
             var Plaintext = File.ReadAllText("ptext.txt");
@@ -89,7 +89,7 @@ namespace ConsoleApp1
 
             int m = PlaintextAsInt;
 
-            Console.WriteLine("Plaintext converted to ascii characters, and then stored as an int:\n\t" + m);
+            //Console.WriteLine("Plaintext converted to ascii characters, and then stored as an int:\n\t" + m);
 
 
             //int32 max is 2147483647

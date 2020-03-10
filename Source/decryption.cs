@@ -12,11 +12,15 @@ namespace ConsoleApp1
     {
         public static void Decryption()
         {
+            Console.WriteLine("Beginning decryption.\n");
+
             var fromFile = File.ReadAllText("prikey.txt");
             var split = fromFile.Split(' ');
             var p = Convert.ToUInt32(split[0]);
-            var g = Convert.ToInt32(split[1]);
             var d = Convert.ToUInt32(split[2]);
+
+            Console.WriteLine("p:\n\t" + p);
+            Console.WriteLine("d:\n\t" + d);
 
             var ciphertextFromFile = File.ReadAllText("ctext.txt");
             var splitCipher = ciphertextFromFile.Split(' ');
@@ -34,8 +38,8 @@ namespace ConsoleApp1
                 var c1 = Convert.ToUInt32(CiphertextList[0]);
                 var c2 = Convert.ToUInt32(CiphertextList[1]);
 
-                Console.WriteLine("c1:\n\t" + c1);
-                Console.WriteLine("c2:\n\t" + c2);
+                //Console.WriteLine("c1:\n\t" + c1);
+                //Console.WriteLine("c2:\n\t" + c2);
 
                 CiphertextList.RemoveAt(0);
                 CiphertextList.RemoveAt(0);
@@ -51,7 +55,7 @@ namespace ConsoleApp1
 
                 var m = (uint)tempM;
 
-                Console.WriteLine("m:\n\t" + m);
+                //Console.WriteLine("m:\n\t" + m);
 
                 byte[] bytes = BitConverter.GetBytes(m);
                 if (BitConverter.IsLittleEndian)
