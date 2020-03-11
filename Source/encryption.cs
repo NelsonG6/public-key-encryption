@@ -34,7 +34,7 @@ namespace ConsoleApp1
             Console.WriteLine("p:\n\t" + p);
             Console.WriteLine("g:\n\t" + g);
             Console.WriteLine("e2:\n\t" + e2);
-            Console.WriteLine("Plaintext from file:\n\t" + Plaintext);
+            Console.WriteLine("\nPlaintext from file:\n\t" + Plaintext);
 
 
 
@@ -68,7 +68,7 @@ namespace ConsoleApp1
 
             string WriteToFile = string.Join(" ", outputList.ToArray());
 
-            Console.WriteLine("Encryption done. Writing to file:\n\t" + WriteToFile + "\n");
+            Console.WriteLine("\nEncryption done. Writing to file:\n\t" + WriteToFile + "\n");
 
             File.WriteAllText("ctext.txt", WriteToFile);
         }

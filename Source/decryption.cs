@@ -81,7 +81,7 @@ namespace ConsoleApp1
             var charArray = charList.ToArray();
             var decrypted = string.Join("", charArray);
 
-            Console.WriteLine("Decrypted text:\n\t" + decrypted);
+            Console.WriteLine("\nDecrypted text:\n\t" + decrypted + "\n");
 
         }
     }
